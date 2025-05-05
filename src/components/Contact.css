@@ -1,0 +1,47 @@
+.contact-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: transparent;
+    color: white;
+  }
+  
+  .contact-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  .contact-section p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: white;
+  }
+  
+  .contact-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .contact-btn {
+    background-color: #1e293b;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s;
+  }
+  
+  .contact-btn:hover {
+    background-color: #334155;
+    transform: scale(1.05);
+  }
+  
+  .contact-btn.linkedin {
+    background-color: #0a66c2;
+  }
+  
+  .contact-btn.email {
+    background-color: #6b7280;
+  }

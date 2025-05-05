@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import About from './components/About';
+import Header from './components/Header';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import VantaWaves from './components/Vanta';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="vanta-header">
+        <VantaWaves />
+        <Header />
+      </div>
+
+      <div className="video-section">
+        <video autoPlay muted loop className="background-video">
+          <source src="/background.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <div className="content-overlay">
+          <About />
+          <Projects></Projects>
+          <Contact></Contact>
+          {/* Add more sections like Projects, Contact here */}
+        </div>
+      </div>
     </div>
   );
 }

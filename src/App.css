@@ -36,3 +36,48 @@
     transform: rotate(360deg);
   }
 }
+/* Make sure body doesn't scroll weirdly */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* The section where the video starts (not including Header) */
+.video-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  animation: fadeRetrigger 10s infinite;
+}
+
+@keyframes fadeRetrigger {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.99;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* All content like About goes here on top of video */
+.content-overlay {
+  position: relative;
+  z-index: 1;
+  padding: 40px 20px;
+  color: white;
+}
